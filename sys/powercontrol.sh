@@ -41,7 +41,6 @@ do
 					sleep 5
 					pkill feh
 				fi
-			else#echo "<"
 			fi
 		fi
 		sleep 10
