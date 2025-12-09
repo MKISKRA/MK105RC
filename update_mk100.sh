@@ -4,9 +4,14 @@ pkill MK100T; cd /root/mk100/MK100/ ; git fetch --all ; git reset --hard ; git p
 #cp /root/mk100/MK100/sys/modemcontrol.sh /root/mk100/mk100t/modemcontrol.sh; chmod +x /root/mk100/mk100t/modemcontrol.sh;
 cp /root/mk100/MK100/sys/boot_check.sh /root/mk100/mk100t/boot_check.sh
 systemctl stop tpucontrol;
+systemctl stop modemcontrol;
 sleep 1;
 cp /root/mk100/MK100/sys/tpu_mk100 /root/mk100/mk100t/tpu_mk100
 chmod +x /root/mk100/mk100t/tpu_mk100;
+sleep 1;
+cp /root/mk100/MK100/sys/modemcontrol /root/mk100/mk100t/modemcontrol
+chmod +x /root/mk100/mk100t/modemcontrol;
+sleep 1;
 cp /root/mk100/MK100/sys/gpsd /etc/default/gpsd;
 cd /;
 /home/linaro/start.sh
