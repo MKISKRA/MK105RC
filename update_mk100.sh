@@ -4,6 +4,12 @@ pkill MK100T; cd /root/mk100/MK100/ ; git fetch --all ; git reset --hard ; git p
 #cp /root/mk100/MK100/sys/modemcontrol.sh /root/mk100/mk100t/modemcontrol.sh; chmod +x /root/mk100/mk100t/modemcontrol.sh;
 cp /root/mk100/MK100/sys/boot_check.sh /root/mk100/mk100t/boot_check.sh;
 chmod +x  /root/mk100/mk100t/boot_check.sh;
+cp /root/mk100/MK100/sys/off_modemcontrol.sh /root/mk100/mk100t/off_modemcontrol.sh;
+chmod +x  /root/mk100/mk100t/off_modemcontrol.sh;
+cp /root/mk100/MK100/sys/on_modemcontrol.sh /root/mk100/mk100t/on_modemcontrol.sh;
+chmod +x  /root/mk100/mk100t/on_modemcontrol.sh;
+cp /root/mk100/MK100/sys/status_modemcontrol.sh /root/mk100/mk100t/status_modemcontrol.sh;
+chmod +x  /root/mk100/mk100t/status_modemcontrol.sh;
 sleep 1;
 systemctl stop tpucontrol;
 systemctl stop modemcontrol;
